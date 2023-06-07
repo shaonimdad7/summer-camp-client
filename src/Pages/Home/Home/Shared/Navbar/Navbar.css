@@ -1,0 +1,11 @@
+.custom_name {
+    font-family: playfair display, serif;
+
+}
+
+.fixed_header {
+    background-color: #3d3d47;
+}
+
+/* ------------------media css for mobile phone  -----------------*/
+@media (max-width: 575.98px) {}
