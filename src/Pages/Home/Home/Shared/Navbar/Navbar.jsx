@@ -4,8 +4,8 @@ import img from '../../../../../assets/logoo.png'
 
 const Navbar = () => {
     const navOptions = <>
-        <li><a>Item 1</a></li>
-        <li> <a>item2</a> </li>
+        <li><a>Instructors </a></li>
+        <li> <a>Classes </a> </li>
         <li><a>Item 3</a></li>
     </>
     return (
