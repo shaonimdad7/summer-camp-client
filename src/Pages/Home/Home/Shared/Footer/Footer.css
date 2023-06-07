@@ -1,0 +1,20 @@
+.footer_container {
+    background-color: #3d3d47;
+}
+
+.footer_services {
+    border-bottom: 2px solid #f6520a;
+    font-size: 23px;
+    margin-bottom: 5px;
+    line-height: 40px;
+    font-family: playfair display, serif;
+}
+
+.custom_name {
+    font-family: playfair display, serif;
+
+}
+
+.last_footer {
+    background-color: #f6520a;
+}
