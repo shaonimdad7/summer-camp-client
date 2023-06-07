@@ -1,0 +1,23 @@
+.price_custom {
+    background-color: orangered;
+    width: 80px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    color: white;
+    font-size: 18px;
+    border-radius: 15px;
+    font-weight: 600;
+}
+
+.btn_showClass {
+    background-color: #f6520a;
+    color: white;
+    border: none;
+    transition: .4s;
+}
+
+.btn_showClass:hover {
+    background-color: black;
+    color: white;
+}
