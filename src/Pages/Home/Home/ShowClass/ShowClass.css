@@ -21,3 +21,6 @@
     background-color: black;
     color: white;
 }
+
+/* ------------------media css for mobile phone  -----------------*/
+@media (max-width: 575.98px) {}

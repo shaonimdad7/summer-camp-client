@@ -37,3 +37,51 @@
 .react_icon {
     font-size: 25px;
 }
+
+.why_contaier {
+    position: relative;
+}
+
+/* ------------------media css for mobile phone  -----------------*/
+@media (max-width: 575.98px) {
+    .box_shadow {
+        padding-top: 10px;
+        height: 750px;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+    }
+
+    .why_contaier {
+        position: relative;
+    }
+
+    .about_detalis_container {
+        position: absolute;
+        top: 220px;
+        left: 0px;
+    }
+
+    .about_detalis_container h2 {
+        font-size: 33px;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .single_part {
+        margin-top: 20px;
+        padding: 10px 12px 10px 12px;
+        border-radius: 5px;
+    }
+
+    .single_part h3 {
+        font-size: 24px;
+    }
+
+    .single_part p {
+        font-size: 16px;
+    }
+
+    .react_icon {
+        font-size: 20px;
+    }
+}

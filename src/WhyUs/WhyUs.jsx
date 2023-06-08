@@ -6,7 +6,7 @@ import { FaQuoteLeft } from 'react-icons/fa';
 const WhyUs = () => {
     return (
         <div className='box_shadow'>
-            <div className='relative max-w-6xl mx-auto mb-20'>
+            <div className=' why_contaier max-w-6xl mx-auto mb-20'>
                 <div className='img_container'>
                     <img src={aboutImg} alt="" />
                 </div>
