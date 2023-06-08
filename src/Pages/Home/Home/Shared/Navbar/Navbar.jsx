@@ -6,7 +6,7 @@ import img from '../../../../../assets/logoo.png'
 const Navbar = () => {
     const navOptions = <>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/">Instructors</Link></li>
+        <li><Link to="/instractor">Instructors</Link></li>
         <li><Link to="/classes">Classes</Link></li>
     </>
     return (

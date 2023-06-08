@@ -7,7 +7,7 @@ const PopularClasses = () => {
     const [classes, setClasess] = useState([])
 
     useEffect(() => {
-        fetch('class.json')
+        fetch('http://localhost:5000/class')
             .then(res => res.json())
             .then(data => {
                 const popularClasses = data.filter(item => item.category === 'popularClass')

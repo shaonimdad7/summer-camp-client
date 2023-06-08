@@ -7,7 +7,7 @@ const PopularInstractor = () => {
     const [instructors, setInstructors] = useState([])
 
     useEffect(() => {
-        fetch('instructor.json')
+        fetch('http://localhost:5000/instractor')
             .then(res => res.json())
             .then(data => {
                 const popularInstructor = data.filter(instructor => instructor.category === 'popularInstructor')

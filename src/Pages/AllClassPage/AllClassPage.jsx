@@ -9,7 +9,7 @@ const AllClassPage = () => {
     const [allClasses, setAllClasess] = useState([])
 
     useEffect(() => {
-        fetch('class.json')
+        fetch('http://localhost:5000/class')
             .then(res => res.json())
             .then(data => setAllClasess(data))
     }, [])
