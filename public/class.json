@@ -1,0 +1,80 @@
+[
+    {
+        "_id": "642c155b2c4774f05c36eeaa",
+        "name": "Mastering Grammar of English",
+        "importance": "English opens up a world of opportunities, facilitating communication and collaboration across cultures.",
+        "image": "https://i.ibb.co/BVffkD2/english-1.jpg",
+        "instructorName": "Elizabeth Gillies",
+        "category": "popularClass",
+        "price": 20.54,
+        "rating": 4,
+        "availableSeat": 25,
+        "details": "English is an incredibly important language on the global stage. It serves as the lingua franca of international business, diplomacy, and academic research. Proficiency in English opens up a world of opportunities, facilitating communication and collaboration across cultures. It is the language of technology and innovation.",
+        "courseTime": "12 week"
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeb9",
+        "name": "Japanese Conversation Course",
+        "importance": "Learning Japanese allows individuals to delve into its unique culture, literature, and traditional arts.",
+        "image": "https://i.ibb.co/d6bwp4M/japanes-1.jpg",
+        "instructorName": "Sam Underwood",
+        "category": "popularClass",
+        "price": 31.21,
+        "rating": 3,
+        "availableSeat": 17,
+        "details": "Japanese is a language of great significance, both culturally and economically. Japan has a rich heritage and is known for its advancements in technology and entertainment. Learning Japanese allows individuals to delve into its unique culture, literature, and traditional arts like calligraphy and tea ceremonies. ",
+        "courseTime": "17 week"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee7c",
+        "name": "German for Beginners",
+        "importance": "German is a language that holds great importance in Europe and beyond.",
+        "image": "https://i.ibb.co/kq6VvG4/german-1.jpg",
+        "instructorName": "Brianna Brown",
+        "category": "popularClass",
+        "price": 25.21,
+        "rating": 4.5,
+        "availableSeat": 19,
+        "details": "German is a language that holds great importance in Europe and beyond. Germany has a strong economy and is a hub for engineering, automotive, and manufacturing industries. Learning German can unlock opportunities for employment, especially in multinational corporations with German ties. Germany is also renowned for its contributions to science. ",
+        "courseTime": "15 week"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee88",
+        "name": "Russian Language: Basics",
+        "importance": "Russian  is a language of diplomacy and strategic importance, with Russia playing a key role in international affairs.",
+        "image": "https://i.ibb.co/6W35Yrm/rasian-1.jpg",
+        "instructorName": "Sharon Lawrence",
+        "category": "popularClass",
+        "price": 19.50,
+        "rating": 4,
+        "availableSeat": 27,
+        "details": "Russian is a language of significant geopolitical importance. Russia is the largest country in the world, and its language is spoken by millions of people across Eurasia. Proficiency in Russian can provide access to a diverse range of cultures, literature, and history. It is a language of diplomacy and strategic importance. ",
+        "courseTime": "16 week"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee7a",
+        "name": "Modern Standard Arabic",
+        "importance": "Proficiency in Arabic enables individuals to understand and appreciate the rich Arab heritage, including literature, poetry, and Islamic scholarship.",
+        "image": "https://i.ibb.co/hcQ3Qmz/arabic-1.jpg",
+        "instructorName": "Abu Hamza",
+        "category": "popularClass",
+        "price": 22.80,
+        "rating": 5,
+        "availableSeat": 13,
+        "details": "Arabic is a language with immense historical and cultural significance. It is the language of the Quran and is spoken by millions of people in the Middle East and North Africa. Proficiency in Arabic enables individuals to understand and appreciate the rich Arab heritage, including literature, poetry, and Islamic scholarship. From a practical standpoint. ",
+        "courseTime": "11 week"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee8c",
+        "name": "Spanish for Professionals",
+        "importance": "Spanish can provide competitive advantages in business and trade. Moreover, Spanish is a language of global tourism.",
+        "image": "https://i.ibb.co/ZGTsQyz/spanish-1.jpg",
+        "instructorName": "Maddison Brown",
+        "category": "popularClass",
+        "price": 17.34,
+        "rating": 3,
+        "availableSeat": 31,
+        "details": "Spanish is one of the most widely spoken languages globally, with a growing number of speakers in the United States and Latin America. Proficiency in Spanish opens up access to vibrant cultures, literature, and art from Spain and various Latin American countries. With the increasing economic influence of Latin American nations, knowledge of Spanish can provide competitive advantages in business and trade.  ",
+        "courseTime": "10 week"
+    }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "_id": "643010e0f5a7e52ce1e8fa65",
+        "name": "James Mackay",
+        "details": " The lessons are well-structured and presented in a logical order, allowing learners to progress at their own pace. The website also provides regular progress tracking, allowing users to monitor their advancement and stay motivated. With its organized layout.",
+        "rating": 3
+    },
+    {
+        "_id": "643010f9f5a7e52ce1e8fa66",
+        "name": "Elaine Hendrix",
+        "details": "What sets the language course website apart is its interactive and engaging content. The website incorporates interactive exercises, quizzes, and games that make learning a new language enjoyable and immersive.",
+        "rating": 2
+    },
+    {
+        "_id": "6430110af5a7e52ce1e8fa67",
+        "name": "Daniella Alonso",
+        "details": "The language course website goes beyond traditional textbook learning by offering a range of multimedia resources. Users can access audio recordings, videos, and authentic materials that provide real-world context for language learning.",
+        "rating": 5
+    },
+    {
+        "_id": "64301123f5a7e52ce1e8fa68",
+        "name": "Emma Samms",
+        "details": "One of the strengths of the language course website is its community-oriented features. The website provides opportunities for learners to connect with each other through discussion forums, language exchange programs, and virtual study groups.",
+        "rating": 4
+    },
+    {
+        "_id": "6430113af5a7e52ce1e8fa69",
+        "name": "Nathalie Kelley",
+        "details": " From downloadable study guides and vocabulary lists to grammar reference materials and cultural insights, comprehensive learning tools. These additional resources cater to different learning styles and provide users with extra practice and support.",
+        "rating": 5
+    }
+]

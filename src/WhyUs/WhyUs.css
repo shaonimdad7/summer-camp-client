@@ -49,6 +49,8 @@
         height: 750px;
         padding-bottom: 30px;
         margin-bottom: 30px;
+        width: 98%;
+        margin: 0 auto;
     }
 
     .why_contaier {

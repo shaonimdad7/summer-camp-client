@@ -9,7 +9,8 @@ const AllClassesShow = ({ singleClass }) => {
             <div className="card w-96 bg-base-100 shadow-xl">
                 <figure><img src={image} alt="Shoes" /></figure>
                 <div className="card-body">
-                    <h2 className="card-title">{name}</h2>
+                    <h2 className="card-title font-bold">{name}</h2>
+                    <hr />
                     <h3 className='font-semibold text-orange-800'>InsTructor Name: <span className='text-black'>{instructorName}</span></h3>
                     <p>{importance}</p>
                     <div className="card-actions flex items-center justify-between">

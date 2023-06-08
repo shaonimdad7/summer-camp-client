@@ -4,6 +4,8 @@ import Banner from './Shared/Banner/Banner';
 import WhyUs from '../../../WhyUs/WhyUs';
 import PopularClasses from '../PopularClasses/PopularClasses';
 import { Helmet } from 'react-helmet-async';
+import PopularInstractor from './PopularInstractor/PopularInstractor';
+import Testimonials from '../../Testimonials/Testimonials';
 
 
 const Home = () => {
@@ -14,6 +16,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <PopularClasses></PopularClasses>
+            <Testimonials></Testimonials>
             <WhyUs></WhyUs>
         </div>
     );
