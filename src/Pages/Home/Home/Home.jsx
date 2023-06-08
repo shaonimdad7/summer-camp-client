@@ -3,8 +3,13 @@ import './Home.css'
 import Banner from './Shared/Banner/Banner';
 import WhyUs from '../../../WhyUs/WhyUs';
 import PopularClasses from '../PopularClasses/PopularClasses';
+import { Helmet } from 'react-helmet-async';
+
 
 const Home = () => {
+    <Helmet>
+        <title>Home</title>
+    </Helmet>
     return (
         <div>
             <Banner></Banner>

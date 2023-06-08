@@ -1,0 +1,7 @@
+.marquee_container {
+    margin: auto;
+    background-color: rgb(221, 166, 166);
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: 400;
+}
