@@ -5,6 +5,7 @@ import Main from "../Layout/Main";
 import Home from "../Pages/Home/Home/Home";
 import AllClassPage from "../Pages/AllClassPage/AllClassPage";
 import InstractorPage from "../Pages/InstructorPage/InstractorPage";
+import Login from "../Pages/LogIn/Login";
 
 
 
@@ -24,6 +25,10 @@ export const router = createBrowserRouter([
             {
                 path: 'instractor',
                 element: <InstractorPage></InstractorPage>
+            },
+            {
+                path: 'login',
+                element: <Login></Login>
             }
         ]
     },

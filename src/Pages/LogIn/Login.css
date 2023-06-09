@@ -1,0 +1,15 @@
+.he {
+    background-image: url('/src/assets/about.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: .8;
+
+}
+
+.show_hide_password {
+    right: 15px;
+    bottom: 12px;
+    font-size: 28px;
+    cursor: pointer;
+}
