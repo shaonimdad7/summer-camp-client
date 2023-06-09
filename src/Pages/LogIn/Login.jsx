@@ -3,7 +3,11 @@ import './Login.css'
 import { FaRegEyeSlash } from 'react-icons/fa';
 import { FaRegEye } from 'react-icons/fa';
 import { useState } from 'react';
+import { useContext } from 'react';
+import { AuthContext } from '../../Providers/AuthProviders';
+import { Link } from 'react-router-dom';
 const Login = () => {
+    const { signIn, loading } = useContext(AuthContext)
     const [show, setShow] = useState(false);
     const handleLogIn = event => {
         event.preventDefault();
@@ -11,6 +15,11 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
         console.log(email, password);
+        signIn(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
     }
     return (
         <div className=''>
@@ -52,6 +61,7 @@ const Login = () => {
                                 <button className="btn btn-primary">Login</button>
                             </div>
                         </form>
+                        <p className='mt-4 text-center mb-2'>Are you new Here? <Link className='text-black font-bold' to="/signup">Sing Up</Link> </p>
                     </div>
                 </div>
             </div>
