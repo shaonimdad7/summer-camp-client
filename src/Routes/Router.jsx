@@ -7,6 +7,8 @@ import AllClassPage from "../Pages/AllClassPage/AllClassPage";
 import InstractorPage from "../Pages/InstructorPage/InstractorPage";
 import Login from "../Pages/LogIn/Login";
 import SignUp from "../Pages/SignUp/SignUp";
+import Secret from "../secret/Secret";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -34,6 +36,10 @@ export const router = createBrowserRouter([
             {
                 path: 'signup',
                 element: <SignUp></SignUp>
+            },
+            {
+                path: 'secret',
+                element: <PrivateRoute><Secret></Secret></PrivateRoute>
             }
         ]
     },
