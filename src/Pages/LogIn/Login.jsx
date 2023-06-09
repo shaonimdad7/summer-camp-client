@@ -8,6 +8,7 @@ import { AuthContext } from '../../Providers/AuthProviders';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Swal from 'sweetalert2';
+import Socilalogin from '../SocialLogin/Socilalogin';
 const Login = () => {
 
     const { signIn, loading } = useContext(AuthContext)
@@ -85,6 +86,7 @@ const Login = () => {
                                 </div>
                             </form>
                             <p className='mt-4 text-center mb-2'>Are you new Here? <Link className='text-black font-bold' to="/signup">Sing Up</Link> </p>
+                            <Socilalogin></Socilalogin>
                         </div>
                     </div>
                 </div>

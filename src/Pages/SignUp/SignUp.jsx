@@ -9,6 +9,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { Helmet } from 'react-helmet-async';
 import Swal from 'sweetalert2';
+import Socilalogin from '../SocialLogin/Socilalogin';
 
 const SignUp = () => {
     const [show, setShow] = useState(false);
@@ -21,30 +22,44 @@ const SignUp = () => {
 
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
-        console.log(data)
         createUser(data.email, data.password, data.name)
             .then(result => {
+
                 const loggedUser = result.user;
                 console.log(loggedUser)
+
                 updateUserProfile(data.name, data.photoURL)
                     .then(() => {
-                        console.log('user profile updated')
-                        reset();
-                        Swal.fire({
-                            position: 'middle',
-                            icon: 'success',
-                            title: 'You have Sign Up successfully',
-                            showConfirmButton: false,
-                            timer: 1500
+                        // load user data 
+                        const saveUser = { name: data.name, email: data.email }
+                        fetch('http://localhost:5000/users', {
+                            method: 'POST',
+                            headers: {
+                                'content-type': 'application/json'
+                            },
+                            body: JSON.stringify(saveUser)
                         })
-                        navigate(from, { replace: true });
+                            .then(res => res.json())
+                            .then(data => {
+                                if (data.insertedId) {
+                                    reset();
+                                    Swal.fire({
+                                        position: 'middle',
+                                        icon: 'success',
+                                        title: 'You have Sign Up successfully',
+                                        showConfirmButton: false,
+                                        timer: 1500
+                                    })
+                                    navigate('/');
+                                }
+                            })
                     })
                     .catch(error => console.log(error));
             })
     };
 
-
     //  shaon@imdad.com
+    // sam@brown.com
     // nithi@nithi.com
     // victoria@sin.com
     //  12A@as55
@@ -106,10 +121,11 @@ const SignUp = () => {
                                 </div>
 
                                 <div className="form-control mt-6">
-                                    <button className="btn btn-primary">Login</button>
+                                    <button className="btn btn-primary">Sign Up</button>
                                 </div>
                             </form>
                             <p className='mt-4 text-center mb-2'> Already Have An Account? <Link className='text-black font-bold' to="/login">Login</Link> </p>
+                            <Socilalogin></Socilalogin>
                         </div>
                     </div>
                 </div>

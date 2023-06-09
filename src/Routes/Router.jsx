@@ -47,7 +47,7 @@ export const router = createBrowserRouter([
     },
     {
         path: 'dashboard',
-        element: <DasBoard></DasBoard>,
+        element: <PrivateRoute><DasBoard></DasBoard></PrivateRoute>,
         children: [
             {
                 path: 'myclass',
