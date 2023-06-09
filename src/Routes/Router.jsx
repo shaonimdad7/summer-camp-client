@@ -9,6 +9,8 @@ import Login from "../Pages/LogIn/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import Secret from "../secret/Secret";
 import PrivateRoute from "./PrivateRoute";
+import DasBoard from "../Layout/DasBoard";
+import MyClass from "../Pages/DashBoard/MyClass/MyClass";
 
 
 
@@ -41,6 +43,16 @@ export const router = createBrowserRouter([
                 path: 'secret',
                 element: <PrivateRoute><Secret></Secret></PrivateRoute>
             }
-        ]
+        ],
     },
+    {
+        path: 'dashboard',
+        element: <DasBoard></DasBoard>,
+        children: [
+            {
+                path: 'myclass',
+                element: <MyClass></MyClass>
+            }
+        ]
+    }
 ]);
