@@ -38,13 +38,13 @@ const DasBoard = () => {
                 <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
 
             </div>
-            <div className="drawer-side bg-[#D1A054]">
+            <div className="drawer-side bg-black">
                 <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                 <div className='daboardHeader'>
                     <h2 className=''>EduClam</h2>
                     <p>An language Institute</p>
                 </div>
-                <ul className="menu p-4 w-80 h-full bg-[#D1A054] text-base-content">
+                <ul className="menu p-4 w-80 h-full text-base-content">
                     {
                         isAdmin ? (
                             <>
@@ -53,7 +53,7 @@ const DasBoard = () => {
                             </>
                         ) : isInstructor ? (
                             <>
-                                <li><NavLink to="/dashboard/additem"><FaWallet></FaWallet> Add an Item</NavLink></li>
+                                <li><NavLink to="/dashboard/additem"><FaWallet></FaWallet> Add Items</NavLink></li>
                                 <li><NavLink to="/dashboard/myclasses"><FaWallet></FaWallet> My Classes</NavLink></li>
                             </>
                         ) : (
@@ -72,7 +72,8 @@ const DasBoard = () => {
 
                     <div className='divider'></div>
                     <li><NavLink to="/"><FaHome></FaHome> Home</NavLink></li>
-                    <li><NavLink to="/instructor"><FaUser></FaUser> Instructors</NavLink></li>
+
+                    <li><NavLink to="/instractor"><FaUser></FaUser> Instructors</NavLink></li>
                     <li><NavLink to="/classes"><FaSignInAlt></FaSignInAlt> Classes</NavLink></li>
 
                 </ul>

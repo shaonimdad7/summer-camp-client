@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import useClass from '../../../customhokk/useClass';
 import { FaTrashAlt } from 'react-icons/fa';
 import Swal from 'sweetalert2';
+import './MyClass.css'
 
 const MyClass = () => {
     const [cart, refetch] = useClass();
@@ -41,9 +42,9 @@ const MyClass = () => {
             <Helmet>
                 <title>MyClasses</title>
             </Helmet>
-            <div>
-                <h1>my classes {cart.length}</h1>
-                <h1>Total price {total}</h1>
+            <div className='myCLass_header'>
+                <h1>My All Classes: {cart.length}</h1>
+                <h1>My Total price: {total}</h1>
 
             </div>
             <div className="overflow-x-auto">

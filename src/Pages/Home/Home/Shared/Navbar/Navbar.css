@@ -1,6 +1,6 @@
 .custom_name {
     font-family: playfair display, serif;
-
+    font-size: 35px;
 }
 
 .fixed_header {
@@ -13,5 +13,14 @@
     align-items: center;
 }
 
+.custom_navBar {
+    font-size: 18px;
+}
+
 /* ------------------media css for mobile phone  -----------------*/
-@media (max-width: 575.98px) {}
+@media (max-width: 575.98px) {
+    .custom_name {
+        font-family: playfair display, serif;
+        font-size: 18px;
+    }
+}

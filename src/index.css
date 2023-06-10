@@ -3,22 +3,32 @@
 @tailwind utilities;
 
 .drawer-side a.active {
-    color: white;
+    color: orange;
+    font-size: 18px;
+    font-family: playfair display, serif;
 }
 
 .drawer-side a {
     background-color: transparent;
-
+    color: white;
+    margin: 2px 0;
+    font-size: 17px;
+    font-family: playfair display, serif;
 }
 
 .daboardHeader h2 {
-    font-size: 40px;
+    font-size: 44px;
     text-align: center;
     margin-top: 30px;
+    color: white;
+    font-family: playfair display, serif;
 }
 
 .daboardHeader p {
     text-align: center;
-    font-weight: 500;
+
     margin-bottom: 30px;
+    color: white;
+    font-size: 18px;
+    font-family: playfair display, serif;
 }
