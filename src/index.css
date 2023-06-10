@@ -10,3 +10,15 @@
     background-color: transparent;
 
 }
+
+.daboardHeader h2 {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.daboardHeader p {
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 30px;
+}

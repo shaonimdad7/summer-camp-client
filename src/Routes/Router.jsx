@@ -11,6 +11,12 @@ import Secret from "../secret/Secret";
 import PrivateRoute from "./PrivateRoute";
 import DasBoard from "../Layout/DasBoard";
 import MyClass from "../Pages/DashBoard/MyClass/MyClass";
+import ManageClasses from "../Pages/DashBoard/ManageClasses/ManageClasses";
+import ManageUsers from "../Pages/DashBoard/ManageUsers/ManageUsers";
+import AddItem from "../Pages/DashBoard/AddItem/AddItem";
+import MyClassInstra from "../Pages/DashBoard/MyClassIns/MyClassInstra";
+import Payment from "../Pages/DashBoard/Payment/Payment";
+import EnrollClass from "../Pages/DashBoard/EnrollClass/EnrollClass";
 
 
 
@@ -52,6 +58,30 @@ export const router = createBrowserRouter([
             {
                 path: 'myclass',
                 element: <MyClass></MyClass>
+            },
+            {
+                path: 'manageclasses',
+                element: <ManageClasses></ManageClasses>
+            },
+            {
+                path: 'manageusers',
+                element: <ManageUsers></ManageUsers>
+            },
+            {
+                path: 'additem',
+                element: <AddItem></AddItem>
+            },
+            {
+                path: 'myclasses',
+                element: <MyClassInstra></MyClassInstra>
+            },
+            {
+                path: 'history',
+                element: <Payment></Payment>
+            },
+            {
+                path: 'enrollclass',
+                element: <EnrollClass></EnrollClass>
             }
         ]
     }

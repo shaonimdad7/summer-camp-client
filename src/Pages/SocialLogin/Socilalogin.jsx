@@ -14,7 +14,7 @@ const Socilalogin = () => {
         const from = location.state?.from?.pathname || "/";
         googleSignIn()
             .then(result => {
-                const loggedInuser = result.iser;
+                const loggedInuser = result.user;
                 console.log(loggedInuser);
                 const saveUser = { name: loggedInuser.displayName, email: loggedInuser.email }
                 fetch('http://localhost:5000/users', {
@@ -25,14 +25,10 @@ const Socilalogin = () => {
                     body: JSON.stringify(saveUser)
                 })
                     .then(res => res.json())
-                    .then(data => {
-                        if (data.insertedId) {
-                            navigate(from, { replace: true });
-                        }
+                    .then(() => {
+                        navigate(from, { replace: true });
+
                     })
-
-
-                // navigate(from, { replace: true });
             })
     }
     return (
@@ -41,11 +37,6 @@ const Socilalogin = () => {
             <div className=' text-center  my-2'>
                 <button onClick={handleGoogleSignIn} className='btn btn_custom w-[90%]'> Sign Up With <span className='ml-3'><FaGoogle /> </span></button>
             </div>
-            {/* {newuser && 
-            <div>
-                <h3>user: {newuser?.displayName}</h3>
-            </div>
-            } */}
         </div>
     );
 };
