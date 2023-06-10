@@ -75,37 +75,6 @@ const DasBoard = () => {
                     <li><NavLink to="/instructor"><FaUser></FaUser> Instructors</NavLink></li>
                     <li><NavLink to="/classes"><FaSignInAlt></FaSignInAlt> Classes</NavLink></li>
 
-                    {/* {isAdmin && (
-                        <>
-                            <li><NavLink to="/dashboard/manageclasses"><FaWallet></FaWallet>Manage Classes</NavLink></li>
-                            <li><NavLink to="/dashboard/manageusers"><FaWallet></FaWallet>Manage users</NavLink></li>
-                        </>
-                    )}
-
-                    {isInstructor && (
-                        <>
-                            <li><NavLink to="/dashboard/additem"><FaWallet></FaWallet>Add a item</NavLink></li>
-                            <li><NavLink to="/dashboard/myclasses"><FaWallet></FaWallet>My Classes</NavLink></li>
-                        </>
-                    )}
-
-                    {isStudent && (
-                        <>
-                            <li><NavLink to="/dashboard/enrollclass"><FaHome></FaHome>My enrolled Courses</NavLink></li>
-                            <li ><NavLink to="/dashboard/myclass"><FaShoppingCart></FaShoppingCart>My Courses
-                                <span className='badge badge-secondary -ml-6'>+ {cart?.length || 0}</span>
-                            </NavLink>
-                            </li>
-                            <li><NavLink to="/dashboard/history"><FaWallet></FaWallet>PayMent</NavLink></li>
-                        </>
-                    )}
-
-
-
-                    <div className='divider'></div>
-                    <li><NavLink to="/"><FaHome></FaHome> Home</NavLink></li>
-                    <li><NavLink to="/instractor"><FaUser></FaUser> Instructors</NavLink></li>
-                    <li><NavLink to="/classes"><FaSignInAlt></FaSignInAlt>Classes</NavLink></li> */}
                 </ul>
 
             </div>
