@@ -4,8 +4,11 @@ import useClass from '../../../customhokk/useClass';
 import { FaTrashAlt } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import './MyClass.css'
+import { useContext } from 'react';
+import { AuthContext } from '../../../Providers/AuthProviders';
 
 const MyClass = () => {
+    const { user } = useContext(AuthContext);
     const [cart, refetch] = useClass();
     const total = cart.reduce((sum, item) => item.price + sum, 0)
 
@@ -40,11 +43,12 @@ const MyClass = () => {
     return (
         <div>
             <Helmet>
-                <title>MyClasses</title>
+                <title>MyClasses </title>
             </Helmet>
             <div className='myCLass_header'>
-                <h1>My All Classes: {cart.length}</h1>
-                <h1>My Total price: {total}</h1>
+                <h1>Hi <span className='text-orange-700'>{user.displayName}</span>! You have added
+                    <span className='text-orange-700'> {cart.length}</span> Coureses here</h1>
+                <h1>Your Total Amount Will be <span className='text-orange-700'> {total}</span>  </h1>
 
             </div>
             <div className="overflow-x-auto">
