@@ -5,7 +5,7 @@ import { Rating } from '@smastrom/react-rating';
 const ShowInstructor = ({ item }) => {
     const { courseName, importance, image, instructorName, experience, price, courseTime, rating, availableSeat } = item;
     return (
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card class_width w-96 bg-base-100 shadow-xl">
             <figure><img src={image} alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="card-title font-bold">{instructorName}</h2>

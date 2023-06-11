@@ -7,7 +7,6 @@ import AllClassPage from "../Pages/AllClassPage/AllClassPage";
 import InstractorPage from "../Pages/InstructorPage/InstractorPage";
 import Login from "../Pages/LogIn/Login";
 import SignUp from "../Pages/SignUp/SignUp";
-import Secret from "../secret/Secret";
 import PrivateRoute from "./PrivateRoute";
 import DasBoard from "../Layout/DasBoard";
 import MyClass from "../Pages/DashBoard/MyClass/MyClass";
@@ -17,6 +16,10 @@ import AddItem from "../Pages/DashBoard/AddItem/AddItem";
 import MyClassInstra from "../Pages/DashBoard/MyClassIns/MyClassInstra";
 import Payment from "../Pages/DashBoard/Payment/Payment";
 import EnrollClass from "../Pages/DashBoard/EnrollClass/EnrollClass";
+// import AdminDashBoard from "../Pages/DashBoard/AdminDasboard/AdminDashBoard";
+// import InstracDashBoard from "../Pages/DashBoard/InstraDashBoard/InstracDashBoard";
+import UserDashBorad from "../Pages/UserDashBoard/UserDashBorad";
+import DashHome from "../Pages/DashBoard/DashHome/DashHome";
 
 
 
@@ -44,10 +47,6 @@ export const router = createBrowserRouter([
             {
                 path: 'signup',
                 element: <SignUp></SignUp>
-            },
-            {
-                path: 'secret',
-                element: <PrivateRoute><Secret></Secret></PrivateRoute>
             }
         ],
     },
@@ -82,6 +81,22 @@ export const router = createBrowserRouter([
             {
                 path: 'enrollclass',
                 element: <EnrollClass></EnrollClass>
+            },
+            // {
+            //     path: 'adminhome',
+            //     element: <AdminDashBoard></AdminDashBoard>
+            // },
+            // {
+            //     path: 'instructorhome',
+            //     element: <InstracDashBoard></InstracDashBoard>
+            // },
+            {
+                path: 'userhome',
+                element: <UserDashBorad></UserDashBorad>
+            },
+            {
+                path: 'dashhome',
+                element: <DashHome></DashHome>
             }
         ]
     }

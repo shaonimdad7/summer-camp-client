@@ -35,7 +35,7 @@ const Socilalogin = () => {
         <div>
             <div className='divider'></div>
             <div className=' text-center  my-2'>
-                <button onClick={handleGoogleSignIn} className='btn btn_custom w-[90%]'> Sign Up With <span className='ml-3'><FaGoogle /> </span></button>
+                <button onClick={handleGoogleSignIn} className='btn btn_login  w-[90%]'> Sign Up With <span className='ml-3'><FaGoogle /> </span></button>
             </div>
         </div>
     );

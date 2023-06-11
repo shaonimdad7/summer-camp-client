@@ -1,0 +1,11 @@
+/* ------------------media css for mobile phone  -----------------*/
+@media (max-width: 575.98px) {
+    .popular_ins_container h2 {
+        font-size: 28px;
+        margin-top: -70px;
+    }
+
+    .popular_ins_container p {
+        font-size: 18px;
+    }
+}

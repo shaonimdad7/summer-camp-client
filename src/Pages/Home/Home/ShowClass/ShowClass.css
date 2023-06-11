@@ -23,4 +23,9 @@
 }
 
 /* ------------------media css for mobile phone  -----------------*/
-@media (max-width: 575.98px) {}
+@media (max-width: 575.98px) {
+    .class_width {
+        width: 90%;
+        margin: 0 auto;
+    }
+}

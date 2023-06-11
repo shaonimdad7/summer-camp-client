@@ -76,7 +76,7 @@ const AllClassesShow = ({ singleClass }) => {
 
     return (
         <div>
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card class_width w-96 bg-base-100 shadow-xl">
                 <figure>
                     <img src={image} alt="Class" />
                 </figure>

@@ -16,7 +16,7 @@ const PopularInstractor = () => {
     }, [])
     return (
         <div className='popular_container'>
-            <div >
+            <div className='popular_ins_container'>
                 <h2 className='text-center header'>Our Awesome Instructor</h2>
                 <p className='text-center -mt-8 text-2xl mb-4'>
                     Rapid learning rapid authoring tools web based training informal <br /> learning virtual classroom, roi instructional designer big data

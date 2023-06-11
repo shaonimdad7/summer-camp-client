@@ -138,9 +138,6 @@ const AddItem = () => {
                             <textarea className="textarea textarea-bordered h-24" name='details'
                                 {...register("details", { required: true, maxLength: 1000 })}
                                 placeholder="Bio"></textarea>
-                            {/* <input type="text" className='input input-bordered w-full max-w-xs' placeholder='Write Details' name='datails'
-                                {...register("details", { required: true })}
-                            /> */}
                         </div>
                         <div className="form-control w-full max-w-xs">
                             <input

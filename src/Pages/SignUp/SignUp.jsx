@@ -113,7 +113,7 @@ const SignUp = () => {
                                     {errors.password?.type === 'maxLength' && <span className='text-red-600 mt-2'>Password should be less than 20 characters</span>}
                                     {errors.password?.type === 'pattern' && <span className='text-red-600 mt-2'> one capital letter and one special character</span>}
 
-                                    <p onClick={() => setShow(!show)} className='show_hide_password absolute'><small>
+                                    <p onClick={() => setShow(!show)} className='password_visibility absolute'><small>
                                         {
                                             show ? <span>  <FaRegEye /></span> : <span><FaRegEyeSlash /></span>
                                         }
@@ -121,10 +121,10 @@ const SignUp = () => {
                                 </div>
 
                                 <div className="form-control mt-6">
-                                    <button className="btn btn-primary">Sign Up</button>
+                                    <button className="btn btn_login ">Sign Up</button>
                                 </div>
                             </form>
-                            <p className='mt-4 text-center mb-2'> Already Have An Account? <Link className='text-black font-bold' to="/login">Login</Link> </p>
+                            <p className='mt-2 text-center mb-2'> Already Have An Account? <Link className='text-[#f6520a] text-[18px] font-bold' to="/login">Login</Link> </p>
                             <Socilalogin></Socilalogin>
                         </div>
                     </div>

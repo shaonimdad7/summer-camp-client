@@ -48,9 +48,10 @@
         padding-top: 10px;
         height: 750px;
         padding-bottom: 30px;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
         width: 98%;
         margin: 0 auto;
+        margin-top: -50px;
     }
 
     .why_contaier {

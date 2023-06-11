@@ -27,11 +27,12 @@ const DasBoard = () => {
             .then((data) => {
                 console.log(data);
                 setInstructor(data.admin);
+                // setInstructor(data.instructor);
             });
     }, []);
 
     return (
-        <div className="drawer lg:drawer-open">
+        <div className="drawer lg:drawer-open drawer-mobile">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content flex flex-col items-center justify-center">
                 <Outlet></Outlet>
@@ -48,16 +49,22 @@ const DasBoard = () => {
                     {
                         isAdmin ? (
                             <>
+                                <li><NavLink to="/dashboard/dashhome"><FaHome></FaHome>DashHome Home</NavLink></li>
+                                {/* <li><NavLink to="/dashboard/adminhome"><FaHome></FaHome>Admin Home</NavLink></li> */}
                                 <li><NavLink to="/dashboard/manageclasses"><FaWallet></FaWallet> Manage Classes</NavLink></li>
                                 <li><NavLink to="/dashboard/manageusers"><FaWallet></FaWallet> Manage Users</NavLink></li>
                             </>
                         ) : isInstructor ? (
                             <>
+                                <li><NavLink to="/dashboard/dashhome"><FaHome></FaHome>DashHome Home</NavLink></li>
+                                {/* <li><NavLink to="/dashboard/instructorhome"><FaHome></FaHome>Instructor Home</NavLink></li> */}
                                 <li><NavLink to="/dashboard/additem"><FaWallet></FaWallet> Add Items</NavLink></li>
                                 <li><NavLink to="/dashboard/myclasses"><FaWallet></FaWallet> My Classes</NavLink></li>
                             </>
                         ) : (
                             <>
+                                <li><NavLink to="/dashboard/dashhome"><FaHome></FaHome>DashHome Home</NavLink></li>
+                                {/* <li><NavLink to="/dashboard/userhome"><FaHome></FaHome>User Home</NavLink></li> */}
                                 <li><NavLink to="/dashboard/enrollclass"><FaHome></FaHome> My Enrolled Courses</NavLink></li>
                                 <li>
                                     <NavLink to="/dashboard/myclass">
@@ -72,7 +79,6 @@ const DasBoard = () => {
 
                     <div className='divider'></div>
                     <li><NavLink to="/"><FaHome></FaHome> Home</NavLink></li>
-
                     <li><NavLink to="/instractor"><FaUser></FaUser> Instructors</NavLink></li>
                     <li><NavLink to="/classes"><FaSignInAlt></FaSignInAlt> Classes</NavLink></li>
 

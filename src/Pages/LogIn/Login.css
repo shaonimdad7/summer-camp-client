@@ -7,9 +7,24 @@
 
 }
 
-.show_hide_password {
+.password_visibility {
     right: 15px;
     bottom: 12px;
     font-size: 28px;
     cursor: pointer;
+}
+
+.btn_login {
+    background-color: #f6520a;
+    font-size: 17px;
+    color: white;
+    padding: 8px 20px;
+    font-family: playfair display, serif;
+    border-radius: 5px;
+    transition: .4s;
+}
+
+.btn_login:hover {
+    background-color: black;
+    color: white;
 }

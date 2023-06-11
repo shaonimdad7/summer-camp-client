@@ -79,6 +79,10 @@
 
 /* ------------------media css for mobile phone  -----------------*/
 @media (max-width: 575.98px) {
+    .testimonial {
+        margin-top: -70px;
+    }
+
     .testiHeader {
         margin-bottom: -180px;
         font-size: 40px;
@@ -143,9 +147,4 @@
         margin-bottom: 10px;
     }
 
-    .name {
-        color: #3D2167;
-        font-size: 20px;
-        margin-top: 10px;
-    }
 }

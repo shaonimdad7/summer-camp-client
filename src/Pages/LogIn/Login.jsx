@@ -66,26 +66,18 @@ const Login = () => {
                                         <span className="label-text">Password</span>
                                     </label>
                                     <input type={show ? "text" : "password"} name='password' placeholder="password" className="input input-bordered" />
-                                    <p onClick={() => setShow(!show)} className='show_hide_password absolute'><small>
+                                    <p onClick={() => setShow(!show)} className='password_visibility absolute'><small>
                                         {
                                             show ? <span>  <FaRegEye /></span> : <span><FaRegEyeSlash /></span>
                                         }
                                     </small></p>
                                 </div>
-                                {/* <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Password</span>
-                                </label>
-                                <input type="password" name='password' placeholder="password" className="input input-bordered" />
-                                <label className="label">
-                                    <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                                </label>
-                            </div> */}
+
                                 <div className="form-control mt-6">
-                                    <button className="btn btn-primary">Login</button>
+                                    <button className="btn btn_login">Login</button>
                                 </div>
                             </form>
-                            <p className='mt-4 text-center mb-2'>Are you new Here? <Link className='text-black font-bold' to="/signup">Sing Up</Link> </p>
+                            <p className='mt-2 text-center mb-2'>Are you new Here? <Link className='text-[#f6520a] font-bold' to="/signup">Sing Up</Link> </p>
                             <Socilalogin></Socilalogin>
                         </div>
                     </div>

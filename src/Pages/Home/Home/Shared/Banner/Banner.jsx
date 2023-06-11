@@ -19,7 +19,7 @@ const Banner = () => {
                             Today’s Learners Into <br />
                             Tomorrow’s Leaders.....
                         </p>
-                        <button className='btn banner_btn mt-10'>Sign Up Now</button>
+                        <button className='btn banner_btn '>Sign Up Now</button>
                     </div>
                 </div>
                 <div>
@@ -30,7 +30,7 @@ const Banner = () => {
                             language is to possess <br />
                             a second soul.....
                         </p>
-                        <button className='btn banner_btn mt-10'>Sign Up Now</button>
+                        <button className='btn banner_btn '>Sign Up Now</button>
                     </div>
                 </div>
                 <div>
@@ -41,7 +41,7 @@ const Banner = () => {
                             Preparing Children For <br />
                             Success In Life.....
                         </p>
-                        <button className='btn banner_btn mt-10'>Sign Up Now</button>
+                        <button className='btn banner_btn '>Sign Up Now</button>
                     </div>
                 </div>
                 <div>
@@ -51,7 +51,7 @@ const Banner = () => {
                             every moment counts <br />
                             They are Future .....
                         </p>
-                        <button className='btn banner_btn mt-10'>Sign Up Now</button>
+                        <button className='btn banner_btn '>Sign Up Now</button>
                     </div>
                 </div>
             </Carousel>
@@ -60,3 +60,6 @@ const Banner = () => {
 };
 
 export default Banner;
+
+
+

@@ -9,3 +9,20 @@
     margin-top: 90px;
     margin-bottom: 120px;
 }
+
+.class_width {}
+
+/* ------------------media css for mobile phone  -----------------*/
+@media (max-width: 575.98px) {
+    .header {
+        font-family: playfair display, serif;
+        font-size: 27px;
+        margin-top: -50px;
+        margin-bottom: 30px;
+    }
+
+    .popular_container {
+        margin-top: 90px;
+        margin-bottom: 120px;
+    }
+}

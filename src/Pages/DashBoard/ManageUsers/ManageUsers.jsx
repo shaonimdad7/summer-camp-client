@@ -49,14 +49,39 @@ const ManageUsers = () => {
             })
     }
     const handleDelete = user => {
-
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/users/${user._id}`, {
+                    method: 'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.deletedCount > 0) {
+                            refetch();
+                            Swal.fire(
+                                'Deleted!',
+                                'Your file has been deleted.',
+                                'success'
+                            )
+                        }
+                    })
+            }
+        })
     }
     return (
         <div>
             <Helmet>
                 <title>ALL Users</title>
             </Helmet>
-            <h1>Here all of my users {users.length}</h1>
+            <h1 className='manageUsers_header'>The Number Of Users using the EduCalm is <span className='text-orange-700'>{users.length}</span></h1>
             <div className="overflow-x-auto">
                 <table className="table table-zebra">
                     {/* head */}
@@ -84,7 +109,9 @@ const ManageUsers = () => {
                                     <button onClick={() => handleMakeAdmin(user)} className='btn bg-orange-200'><FaUserCheck></FaUserCheck></button>
 
                                 }</td>
-                                <td>  <button onClick={() => handleDelete(user)} className="btn btn-ghost  bg-red-800 text-white"><FaTrashAlt></FaTrashAlt></button></td>
+                                <td>
+                                    <button onClick={() => handleDelete(user)} className="btn bg-red-800 text-white"><FaTrashAlt></FaTrashAlt></button>
+                                </td>
                             </tr>)
                         }
 
