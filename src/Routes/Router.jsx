@@ -82,14 +82,6 @@ export const router = createBrowserRouter([
                 path: 'enrollclass',
                 element: <EnrollClass></EnrollClass>
             },
-            // {
-            //     path: 'adminhome',
-            //     element: <AdminDashBoard></AdminDashBoard>
-            // },
-            // {
-            //     path: 'instructorhome',
-            //     element: <InstracDashBoard></InstracDashBoard>
-            // },
             {
                 path: 'userhome',
                 element: <UserDashBorad></UserDashBorad>

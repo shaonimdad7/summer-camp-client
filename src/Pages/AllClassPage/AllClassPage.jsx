@@ -13,16 +13,17 @@ const AllClassPage = () => {
             .then(res => res.json())
             .then(data => setAllClasess(data))
     }, [])
+
     return (
         <div>
             <Helmet>
                 <title>Classes</title>
             </Helmet>
-            <div className='marquee_container'>
+            {/* <div className='marquee_container'>
                 <Marquee>
                     Learning a new language holds immense significance in todays interconnected world. It not only expands ones cultural horizons but also provides numerous cognitive, social, and professional benefits. Linguistic diversity allows individuals to engage with different cultures, fostering understanding, empathy, and global citizenship.
                 </Marquee>
-            </div>
+            </div> */}
             <h2 className='header text-center mt-24'>Choose Your Language
             </h2>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10'>

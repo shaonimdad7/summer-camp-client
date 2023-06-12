@@ -20,7 +20,8 @@ const DasBoard = () => {
                 console.log(data);
                 setAdmin(data.admin);
             });
-    }, []);
+
+    }, [user]);
     useEffect(() => {
         fetch(`http://localhost:5000/users/instructo/${user.email}`)
             .then((res) => res.json())
@@ -28,8 +29,10 @@ const DasBoard = () => {
                 console.log(data);
                 setInstructor(data.admin);
                 // setInstructor(data.instructor);
-            });
-    }, []);
+            })
+
+    }, [user]);
+
 
     return (
         <div className="drawer lg:drawer-open drawer-mobile">
@@ -50,26 +53,23 @@ const DasBoard = () => {
                         isAdmin ? (
                             <>
                                 <li><NavLink to="/dashboard/dashhome"><FaHome></FaHome>DashHome Home</NavLink></li>
-                                {/* <li><NavLink to="/dashboard/adminhome"><FaHome></FaHome>Admin Home</NavLink></li> */}
                                 <li><NavLink to="/dashboard/manageclasses"><FaWallet></FaWallet> Manage Classes</NavLink></li>
                                 <li><NavLink to="/dashboard/manageusers"><FaWallet></FaWallet> Manage Users</NavLink></li>
                             </>
                         ) : isInstructor ? (
                             <>
                                 <li><NavLink to="/dashboard/dashhome"><FaHome></FaHome>DashHome Home</NavLink></li>
-                                {/* <li><NavLink to="/dashboard/instructorhome"><FaHome></FaHome>Instructor Home</NavLink></li> */}
                                 <li><NavLink to="/dashboard/additem"><FaWallet></FaWallet> Add Items</NavLink></li>
                                 <li><NavLink to="/dashboard/myclasses"><FaWallet></FaWallet> My Classes</NavLink></li>
                             </>
                         ) : (
                             <>
                                 <li><NavLink to="/dashboard/dashhome"><FaHome></FaHome>DashHome Home</NavLink></li>
-                                {/* <li><NavLink to="/dashboard/userhome"><FaHome></FaHome>User Home</NavLink></li> */}
                                 <li><NavLink to="/dashboard/enrollclass"><FaHome></FaHome> My Enrolled Courses</NavLink></li>
                                 <li>
                                     <NavLink to="/dashboard/myclass">
                                         <FaShoppingCart></FaShoppingCart> My Courses
-                                        <span className='badge badge-secondary -ml-6'>+ {cart?.length || 0}</span>
+                                        <span className='badge bg-orange-600 p-4 text-[16px] text-white border-0 -ml-6'>+ {cart?.length || 0}</span>
                                     </NavLink>
                                 </li>
                                 <li><NavLink to="/dashboard/history"><FaWallet></FaWallet> Payment</NavLink></li>

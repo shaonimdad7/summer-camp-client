@@ -18,8 +18,8 @@ const DashHome = () => {
                     <p>Welcome to our community!  Whether you are <br /> a  new member or a returning visitor, <br /> we extend a warm greeting <br /> </p>
                     <h2> {user.email} </h2>
                 </div>
-                <div className='useDr_img mask mask-squircle'>
-                    <img className='' src={user.photoURL} alt="" />
+                <div className='useDr_img mask rounded-full'>
+                    <img className='rounded-lg' src={user.photoURL} alt="" />
                 </div>
             </div>
 

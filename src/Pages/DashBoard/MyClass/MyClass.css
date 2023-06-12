@@ -5,3 +5,18 @@
     text-align: center;
     margin-bottom: 30px;
 }
+
+.btn_pay {
+    background-color: #f6520a;
+    font-size: 17px;
+    color: white;
+    padding: 8px 20px;
+    font-family: playfair display, serif;
+    border-radius: 5px;
+    transition: .4s;
+}
+
+.btn_login:hover:hover {
+    background-color: black;
+    color: white;
+}

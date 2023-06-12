@@ -1,16 +1,64 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import useClass from '../../../customhokk/useClass';
-import { FaTrashAlt } from 'react-icons/fa';
+import { FaArrowRight, FaDollarSign, FaGripHorizontal, FaPaypal, FaRedoAlt, FaTrashAlt } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import './MyClass.css'
 import { useContext } from 'react';
 import { AuthContext } from '../../../Providers/AuthProviders';
+import { Link } from 'react-router-dom';
 
 const MyClass = () => {
     const { user } = useContext(AuthContext);
     const [cart, refetch] = useClass();
-    const total = cart.reduce((sum, item) => item.price + sum, 0)
+    const [enrolledCourses, setEnrolledCourses] = useState([]);
+
+    useEffect(() => {
+        // Retrieve enrolled courses from local storage when the component mounts
+        const storedEnrolledCourses = JSON.parse(localStorage.getItem('enrolledCourses'));
+        if (storedEnrolledCourses) {
+            setEnrolledCourses(storedEnrolledCourses);
+        }
+    }, []);
+
+    const handleAddToEnrolled = item => {
+        console.log(item);
+        if (user && user.email) {
+            const enrolledItem = {
+                itemId: item._id,
+                name: item.name,
+                image: item.image,
+                importance: item.importance,
+                price: item.price,
+                rating: item.rating,
+                availableSeat: item.availableSeat,
+                instructorName: item.instructorName,
+                email: user.email
+            };
+            fetch('http://localhost:5000/enrolled', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(enrolledItem)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.insertedId) {
+                        refetch();
+                        Swal.fire({
+                            position: 'middle',
+                            icon: 'success',
+                            title: 'Your class Enrolled Successfully',
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                        setEnrolledCourses((prevCourses) => [...prevCourses, item._id]);
+                        localStorage.setItem('enrolledCourses', JSON.stringify([...enrolledCourses, item._id]));
+                    }
+                });
+        }
+    };
 
     const handleDelete = row => {
         Swal.fire({
@@ -32,9 +80,11 @@ const MyClass = () => {
                             refetch();
                             Swal.fire(
                                 'Deleted!',
-                                'Your file has been deleted.',
+                                'Your Class has been deleted.',
                                 'success'
                             )
+                            // setEnrolledCourses((prevCourses) => [...prevCourses, row._id]);
+                            // localStorage.setItem('enrolledCourses', JSON.stringify([...enrolledCourses, row._id]));
                         }
                     })
             }
@@ -48,7 +98,7 @@ const MyClass = () => {
             <div className='myCLass_header'>
                 <h1>Hi <span className='text-orange-700'>{user.displayName}</span>! You have added
                     <span className='text-orange-700'> {cart.length}</span> Coureses here</h1>
-                <h1>Your Total Amount Will be <span className='text-orange-700'> {total}</span>  </h1>
+                <p className='text-center'>Want to enroll? click the button below...</p>
 
             </div>
             <div className="overflow-x-auto">
@@ -63,6 +113,7 @@ const MyClass = () => {
                             <th>Available Seat</th>
                             <th>Price</th>
                             <th>Delete</th>
+                            <th>Enroll  </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -85,17 +136,25 @@ const MyClass = () => {
                                 <td>{row.availableSeat} Seats Only</td>
                                 <td className='text-end'>$ {row.price}</td>
                                 <td>
-                                    <button onClick={() => handleDelete(row)} className="btn btn-ghost  bg-red-800 text-white"><FaTrashAlt></FaTrashAlt></button>
+                                    <button onClick={() => handleDelete(row)} className="btn btn-ghost  bg-red-600 text-white" >
+                                        <FaTrashAlt></FaTrashAlt>
+                                    </button>
+                                </td>
+                                <td>
+                                    <button
+                                        onClick={() => handleAddToEnrolled(row)}
+                                        disabled={enrolledCourses.includes(row._id)}
+                                        className="btn bg-orange-500 text-black"
+                                    >
+                                        <FaGripHorizontal />
+                                    </button>
                                 </td>
                             </tr>)
                         }
-
                     </tbody>
-
                 </table>
             </div>
         </div>
-
     );
 };
 

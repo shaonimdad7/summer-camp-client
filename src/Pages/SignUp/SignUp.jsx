@@ -63,6 +63,8 @@ const SignUp = () => {
     // nithi@nithi.com
     // victoria@sin.com
     //  12A@as55
+    // status pending
+    // 543354335433shaon
     return (
         <>
             <Helmet>
